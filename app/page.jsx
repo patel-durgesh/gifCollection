@@ -3,6 +3,7 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 import { signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/cards/Card";
