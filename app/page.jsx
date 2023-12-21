@@ -26,7 +26,6 @@ export default function Home() {
         `https://api.giphy.com/v1/stickers/search?api_key=GlVGYHkr3WSBnllca54iNt0yFbjz7L65&q=${query}&limit=100&offset=&rating=g&lang=en&bundle=messaging_non_clips`
       );
       const res = await querry.json();
-      console.log("gifs", res);
 
       setData(res.data);
     };
