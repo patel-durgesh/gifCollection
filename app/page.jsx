@@ -22,6 +22,10 @@ export default function Home() {
   // calling the giphy api----------------------------------
   useEffect(() => {
     const getData = async () => {
+      if (typeof window !== "undefined") {
+        // Client-side code that uses location
+        console.log(window.location.href);
+      }
       const querry = await fetch(
         `https://api.giphy.com/v1/stickers/search?api_key=GlVGYHkr3WSBnllca54iNt0yFbjz7L65&q=${query}&limit=100&offset=&rating=g&lang=en&bundle=messaging_non_clips`
       );
